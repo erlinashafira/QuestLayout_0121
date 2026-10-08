@@ -1,6 +1,7 @@
 package com.example.prak4.ui.theme
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -28,12 +29,12 @@ import androidx.compose.ui.unit.sp
 import com.example.prak4.R
 
 @Composable
-fun ActivitasPertama(modifier: Modifier){
+fun ActivitasPertama(modifier: Modifier) {
     Column(
         modifier = Modifier.padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
+    ) {
         Text(
             stringResource(id = R.string.prodi),
             fontSize = 35.sp,
@@ -53,48 +54,44 @@ fun ActivitasPertama(modifier: Modifier){
             )
 
         ) {
-        Row() {
-            val gambar = painterResource(id = R.drawable.logo_umy)
-            Image(
-                painter = gambar,
-                contentDescription = null,
-                modifier = Modifier.size(100.dp).padding(all = 5.dp)
-            )
-        }
-        Spacer(modifier = Modifier.width(38.dp))
-        Row(){
-        Column() {
-            Text(
-                stringResource(id = R.string.nama),
-                fontSize = 38.sp,
-                fontFamily = FontFamily.Cursive,
-                color = color.White,
-                modifier = Modifier.padding(top = 15.dp)
-
-            Text(
-                stringResource((id = R.string.alamat),
-            )   fontSize = 28.sp,
-                color = Color.Yellow,
-                modifier = Modifier.padding(top = 10.dp)
-            )
-        }
-            Row(){
-
-            }
-
-        }
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-
-            ){
-                Text(
-                    stringResource(id = R.string.copy),
-                    modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .padding(bottom = 50.dp)
+            Row() {
+                val gambar = painterResource(id = R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier.size(100.dp).padding(all = 5.dp)
                 )
-            }
+                Spacer(modifier = Modifier.width(38.dp))
 
+                Column() {
+                    Text(
+                        stringResource(id = R.string.nama),
+                        fontSize = 38.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+
+                    Text(
+                        stringResource(id = R.string.alamat),
+                        fontSize = 28.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                }
+            }
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ) {
+            Text(
+                stringResource(id = R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
+        }
     }
 }
+
