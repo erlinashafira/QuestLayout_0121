@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -15,6 +16,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.R
 import androidx.compose.ui.unit.dp
@@ -55,6 +58,24 @@ fun ActivitasPertama(modifier: Modifier){
                 modifier = Modifier.size(100.dp).padding(all = 5.dp)
             )
         }
+        Spacer(modifier = Modifier.width(38.dp))
+        Row(){
+        Column() {
+            Text(
+                stringResource(id = R.string.nama),
+                fontSize = 38.sp,
+                fontFamily = FontFamily.Cursive,
+                color = color.White,
+                modifier = Modifier.padding(top = 15.dp)
 
+            Text(
+                stringResource((id = R.string.alamat),
+            )   fontSize = 28.sp,
+                color = Color.Yellow,
+                modifier = Modifier.padding(top = 10.dp)
+            )
+        }
+
+        }
     }
 }
