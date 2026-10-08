@@ -5,5 +5,7 @@ import java.lang.reflect.Modifier
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
+    Column(
 
+    )
 }
